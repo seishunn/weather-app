@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import {Main} from "./components/main/Main";
+import Rain from "./components/rain/Rain";
+import Snowfall from "./components/snowfall/Snowfall";
+import Fog from "./components/fog/Fog";
+import {useAppSelector} from "./hooks/redux";
+import {searchInString} from "./utils/searchInString";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const weather = useAppSelector(state => state.weather.current);
+    const weather_text = weather.condition?.text;
+
+    return (
+        <div className="App">
+            <Main/>
+            {searchInString(weather_text, ["rain", "drizzle"]) && <Rain/>}
+            {searchInString(weather_text, ["snow", "sleet", "blizzard", "pellets"]) && <Snowfall/>}
+            {searchInString(weather_text, ["mist", "fog"]) && <Fog/>}
+        </div>
+    );
 }
 
 export default App;

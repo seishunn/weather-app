@@ -1,0 +1,121 @@
+.dayTimeBar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &_bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(255, 255, 255, .1);
+    &_block {
+      position: relative;
+      width: 210px;
+      height: 105px;
+      span {
+          position: absolute;
+          width: 10px;
+          height: 2px;
+          z-index: 5;
+          bottom: -2px;
+      }
+      & > span:nth-child(1) {
+          right: 0;
+      }
+      .sunTime {
+        background: rgb(255, 200, 48);
+      }
+      .moonTime {
+        background: #AADEE7FF ;
+      }
+
+      .dot {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        & > span {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          bottom: calc(50% - 7.5px);
+          left: -2.5px;
+        }
+        &_sunTime {
+          background: rgb(255, 200, 48);
+          box-shadow: 0 0 40px 40px rgba(255, 255, 0, .15);
+        }
+        &_moonTime {
+          background: #aadee7;
+          box-shadow: 0 0 40px 40px #04505d;
+        }
+      }
+
+      svg {
+        position: relative;
+        width: 210px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        height: 105px;
+        rect {
+          height: 100%;
+        }
+        .sunTime_rect {
+          fill: rgba(255, 200, 48, 0.1);
+        }
+        .moonTime_rect {
+          fill: rgba(91, 255, 235, 0.1);
+        }
+
+        circle {
+          position: relative;
+          z-index: 8;
+          width: 100%;
+          height: 100%;
+          fill: transparent;
+          stroke-width: 2;
+          stroke: rgba(255, 255, 255, .1);
+          transform: translate(35px, 35px);
+
+          &:nth-child(2) {
+            stroke-dasharray: 629;
+          }
+          &.sunTime_bar{
+            stroke: rgb(255, 200, 48);
+          }
+          &.moonTime_bar{
+            stroke: #AADEE7FF;
+          }
+        }
+      }
+    }
+  }
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      padding-top: 10px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+    & > div:last-child {
+      align-items: flex-end;
+    }
+    .title {
+      color: rgb(255, 200, 48);
+      &_moonTime {
+        color: #AADEE7FF;
+      }
+    }
+    .description {
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+    }
+  }
+}

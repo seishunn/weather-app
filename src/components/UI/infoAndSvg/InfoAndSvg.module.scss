@@ -1,0 +1,41 @@
+.info_block {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, .05);
+  border-radius: 8px;
+  align-items: center;
+
+  &_active {
+    background: rgba(0, 255, 0, .05);
+    color: rgba(0, 164, 0, .3);
+  }
+
+  &_main {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+    &_active {
+      color: rgb(0, 164, 0);
+    }
+  }
+
+  &_category {
+    display: flex;
+    align-items: center;
+
+    &_svg {
+      svg {
+        width: 30px;
+        fill: rgb(255, 255, 255);
+      }
+
+      &_active {
+        svg {
+          fill: rgb(0, 164, 0);
+        }
+      }
+    }
+  }
+}

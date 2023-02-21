@@ -1,0 +1,121 @@
+.temperatureBlock {
+  display: grid;
+  grid-template-rows: 1fr auto 80px;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, .5);
+  fill: rgba(255, 255, 255, .5);
+  position: relative;
+
+  .image {
+    display: flex;
+    align-items: flex-end;
+
+    &_block {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_info {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .temperature {
+      font-size: 45px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      color: rgb(255, 255, 255);
+
+      .celsius {
+        font-size: 25px;
+      }
+    }
+
+    .description {
+      font-weight: 250;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 11px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 15px;
+        margin-right: 5px;
+      }
+
+      .time {
+        margin-left: 10px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+.search {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  &:hover > input {
+    width: 240px;
+    padding: 10px;
+  }
+  &:hover > &_btn {
+    background: rgb(255, 255, 255);
+  }
+  &_btn {
+    fill: #1da1f3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  input {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+    &::placeholder {
+      color: rgba(255, 255, 255, .3);
+    }
+    &:focus {
+      width: 240px;
+      padding: 10px 10px 10px 15px;
+    }
+  }
+}

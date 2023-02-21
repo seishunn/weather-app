@@ -1,0 +1,25 @@
+.miniInfoBlock {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  .main {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    &_text_dop {
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
+  .description {
+    align-self: baseline;
+    font-size: 10px;
+    &_svg {
+      svg {
+        fill: rgba(255, 255, 255, .5);
+        width: 15px;
+      }
+    }
+  }
+}
