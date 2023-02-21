@@ -1,0 +1,28 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  z-index: 10;
+  background: rgba(0, 0, 0, .7);
+
+  .title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, .8);
+  }
+
+  &_block {
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+  }
+}

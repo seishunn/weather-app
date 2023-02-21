@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from "./SearchInput.module.scss";
 
-interface ISearchInput {
+export interface ISearchInput {
     value: string
     changeValue: (str: string) => void
 }

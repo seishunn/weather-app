@@ -12,6 +12,7 @@ import {getWeather} from "../../actions/weather";
 import {debounceFn} from "../../utils/debounceFn";
 import {useChildren} from "../../hooks/useChildren";
 import InfoAndSvg from "../UI/infoAndSvg/InfoAndSvg";
+import PopupDisplay from "../popupDisplay/PopupDisplay";
 
 export const Main = () => {
     const dispatch = useAppDispatch();
@@ -75,6 +76,7 @@ export const Main = () => {
 
     return (
         <div className={cl.main}>
+            {location.name || <PopupDisplay value={searchQuery} changeValue={searchQueryFN}/>}
             <div className={cl.container}>
                 <TemperatureBlock
                     temperature={weather.temp_c}
