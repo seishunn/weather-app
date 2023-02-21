@@ -76,7 +76,7 @@ export const Main = () => {
 
     return (
         <div className={cl.main}>
-            {location.name || <PopupDisplay value={searchQuery} changeValue={searchQueryFN}/>}
+            {!location.name && <PopupDisplay value={searchQuery} changeValue={searchQueryFN}/>}
             <div className={cl.container}>
                 <TemperatureBlock
                     temperature={weather.temp_c}
