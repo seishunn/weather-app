@@ -63,7 +63,6 @@ html, body, #root {
     min-height: 100%;
     font-family: Arial;
     background: #191B1F;
-    padding: 5px;
 }
 canvas {
     position: fixed;

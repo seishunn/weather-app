@@ -61,4 +61,4 @@ const Rain: React.FC<CanvasProps> = ({...props}) => {
     );
 };
 
-export default Rain;
+export default React.memo(Rain);

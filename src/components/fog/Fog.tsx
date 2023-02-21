@@ -20,4 +20,4 @@ const Fog = () => {
     );
 };
 
-export default Fog;
+export default React.memo(Fog);

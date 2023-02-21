@@ -30,7 +30,7 @@ const Snowfall: React.FC<CanvasProps> = ({...props}) => {
 
             if (drop.y > cnv.height) {
                 drop.y = -20;
-                drop.x = Math.random() * cnv.height;
+                drop.x = Math.random() * cnv.width;
             }
         })
     }
@@ -56,4 +56,4 @@ const Snowfall: React.FC<CanvasProps> = ({...props}) => {
     );
 };
 
-export default Snowfall;
+export default React.memo(Snowfall);
