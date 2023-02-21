@@ -64,6 +64,10 @@ html, body, #root {
     font-family: Arial;
     background: #191B1F;
 }
+.App_block {
+    height: 100vh;
+    overflow: hidden;
+}
 canvas {
     position: fixed;
     top: 0;

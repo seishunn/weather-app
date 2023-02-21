@@ -10,9 +10,14 @@ import {searchInString} from "./utils/searchInString";
 function App() {
     const weather = useAppSelector(state => state.weather.current);
     const weather_text = weather.condition?.text;
+    const classes = ["App"];
+
+    if (!weather_text) {
+        classes.push("App_block");
+    }
 
     return (
-        <div className="App">
+        <div className={classes.join(" ")}>
             <Main/>
             {searchInString(weather_text, ["rain", "drizzle"]) && <Rain/>}
             {searchInString(weather_text, ["snow", "sleet", "blizzard", "pellets"]) && <Snowfall/>}
