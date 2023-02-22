@@ -36,7 +36,7 @@ const TemperatureBlock: React.FC<ITemperatureBlock> = ({temperature, date, locat
                 </div>
                 <div className={cl.temperatureBlock_footer}>
                     <div className={cl.temperatureBlock_footer_item}>{label}{location.name}, {location.country}</div>
-                    <div className={cl.temperatureBlock_footer_item}>{calendar}<span>{new Date(date).toLocaleDateString()}</span><span className={cl.time}>{new Date(date).toLocaleTimeString("en-IT", {hour: '2-digit', minute:'2-digit'})}</span></div>
+                    <div className={cl.temperatureBlock_footer_item}>{calendar}<span>{new Date(date).toLocaleDateString("en-US")}</span><span className={cl.time}>{new Date(date).toLocaleTimeString("en-IT", {hour: '2-digit', minute:'2-digit'})}</span></div>
                 </div>
             </div>
         </SectionBlock>

@@ -13,12 +13,15 @@
     }
   }
   .description {
-    align-self: baseline;
+    align-self: flex-start;
     font-size: 10px;
     &_svg {
+      width: 15px;
+      height: 15px;
       svg {
         fill: rgba(255, 255, 255, .5);
         width: 15px;
+        height: 15px;
       }
     }
   }

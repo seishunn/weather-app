@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from "./selectBlock.module.scss";
+import cl from "./SelectBlock.module.scss";
 
 export interface IOption {
     value: string

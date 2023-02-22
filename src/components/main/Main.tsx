@@ -34,7 +34,7 @@ export const Main = () => {
 
     const weatherResponse: (str: string, count: number) => void = useCallback(debounceFn((str: string, count: number) => {
         dispatch(getWeather(str, count));
-    }, 1000), []);
+    }, 700), []);
 
     const searchQueryFN = (str: any) => {
         setSearchQuery(str);

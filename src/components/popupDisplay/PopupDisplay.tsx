@@ -8,6 +8,7 @@ const PopupDisplay: React.FC<ISearchInput> = ({value, changeValue}) => {
         <div className={cl.popup}>
             <div className={cl.popup_block}>
                 <div className={cl.title}>City search</div>
+                <div className={cl.description}>Automatic city search after entering the name</div>
                 <Input value={value} changeValue={changeValue} title={"City name"} type={"text"}/>
             </div>
         </div>
